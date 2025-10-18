@@ -1,57 +1,142 @@
-/* === Base Element Reset === */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-  display: block;
-}
-*, ::after, ::before {
+/* === Base Reset === */
+*, *::before, *::after {
   box-sizing: border-box;
-}
-
-/* === Typography === */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #212529;
   margin: 0;
-  background-color: #f8f9fa;
-  text-align: left;
+  padding: 0;
 }
 
-/* === Utility Classes (like Bootstrap) === */
-.text-center { text-align: center !important; }
-.pb-3, .py-3 { padding-bottom: 1rem !important; }
-.pt-3, .py-3 { padding-top: 1rem !important; }
-.mt-5, .my-5 { margin-top: 3rem !important; }
-.bg-dark { background-color: #343a40 !important; color: white; }
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f4f5f7;
+  color: #333;
+  line-height: 1.6;
+}
 
-/* === Header & Footer === */
+/* === Header === */
 header {
-  padding: 1rem 0;
-  background-color: #343a40;
-  color: white;
-}
-footer {
+  background: #7a0019; /* deep maroon */
+  color: #ffffff;
   text-align: center;
-  padding: 1rem 0;
-  color: white;
-  background-color: #7a0019;
+  padding: 2rem 0;
 }
 
-/* === Links === */
-a {
-  color: #007bff;
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff !important; /* force white title */
+  margin-bottom: 0.5rem;
+}
+
+header .subtitle {
+  font-size: 1.2rem;
+  color: #f0f0f0 !important; /* softer white for subtitle */
+  margin-bottom: 1rem;
+}
+
+/* === Navigation === */
+nav {
+  background: #343a40;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* === Main Content === */
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #7a0019; /* maroon for section headings */
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* NEW: Added style for the modules list */
+main section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+main section ul li {
+  background-color: #f9f9f9;
+  border-left: 4px solid #7a0019;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+/* === Course Cards === */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.course-card {
+  background: #fdfdfd;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.course-card h3 {
+  color: #343a40;
+  margin-bottom: 0.5rem;
+}
+
+/* === Dark Section (Contact) === */
+.bg-dark {
+  background: #343a40;
+  color: #ffffff;
+  padding: 2rem; /* Add padding to the dark section */
+  border-radius: 0 0 10px 10px; /* Optional: match main's border radius */
+}
+
+.bg-dark h2 {
+  color: #ffffff;
+}
+
+/* === Footer === */
+footer {
+  background: #343a40;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: #ffd700;
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline;
-}
 
-/* === Layout === */
-main {
-  max-width: 800px;
-  margin: 3rem auto;
-  padding: 1rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+footer a:hover {
+  text-decoration: underline;
 }
